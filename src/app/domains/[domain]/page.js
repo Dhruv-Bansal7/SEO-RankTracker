@@ -76,6 +76,7 @@ export default function DomainPage(props) {
             )}
             {!loading && keywords.map((data) => (
                 <KeywordRow {...data} 
+                        key={data._id}
                         results = {results.filter(r => r.keyword === data.keyword)}
                 />
             ))}

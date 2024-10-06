@@ -9,7 +9,8 @@ export default function DomainList({domains , keywords,results}) {
             <DoubleHeader preTitle={"Your Domains"} mainTitle={domains.length + ' Domains'}/>
             {domains.map((domain) => {
                 return (
-                    <DomainRow 
+                    <DomainRow
+                    key={domain._id}
                     icon ={domain.icon} 
                     domain = {domain.domain} 
                     owner = {domain.owner} 

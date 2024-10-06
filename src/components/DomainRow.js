@@ -14,7 +14,7 @@ export default function DomainRow ({domain , icon , owner , keywords,results}) {
                 <h2>{domain}</h2>
               </Link>
             {keywords.map( keywordDoc => (
-              <span className="bg-slate-300 text-xs inline-block mt-1 mr-1 p-1 px-3 rounded-lg">
+              <span key={keywordDoc._id} className="bg-slate-300 text-xs inline-block mt-1 mr-1 p-1 px-3 rounded-lg">
                 {keywordDoc.keyword}
               </span>
             ))}
