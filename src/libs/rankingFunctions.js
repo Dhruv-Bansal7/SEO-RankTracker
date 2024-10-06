@@ -3,8 +3,8 @@ const puppeteer = require("puppeteer");
 export async function getKeywordRank(domain, keyword) {
     const browser = await puppeteer.launch({
         headless: "shell", // Use new headless mode for better real-browser behavior
-        args: [],
-        executablePath: 'C:\\Users\\dhruv bansal\\.cache\\puppeteer\\chrome-headless-shell\\win64-129.0.6668.89\\chrome-headless-shell-win64\\chrome-headless-shell.exe',
+        args: ['--no-sandbox', '--disable-setuid-sandbox'],
+        // executablePath: 'C:\\Users\\dhruv bansal\\.cache\\puppeteer\\chrome-headless-shell\\win64-129.0.6668.89\\chrome-headless-shell-win64\\chrome-headless-shell.exe',
         defaultViewport : {width : 1280 , height : 800}
     });
     const page = await browser.newPage();
