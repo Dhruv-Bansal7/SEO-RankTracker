@@ -2,7 +2,7 @@ const puppeteer = require("puppeteer");
 
 export async function getKeywordRank(domain, keyword) {
     const browser = await puppeteer.launch({
-        headless: false, // Use new headless mode for better real-browser behavior
+        headless: "shell", // Use new headless mode for better real-browser behavior
         args: [],
         defaultViewport : {width : 1280 , height : 800}
     });
